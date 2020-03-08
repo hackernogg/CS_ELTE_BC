@@ -1,4 +1,4 @@
-module selfstudy1
+module selfstudy1_1
 import StdEnv
 
 //Start = " Hello world "
