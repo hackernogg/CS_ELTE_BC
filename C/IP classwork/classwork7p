@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*int foo() {
+    int* y = malloc(sizeof(int));// void* by default
+    printf ("in foo: %p\n",y);
+    return y;
+}
+int main()
+{
+    int x;
+    int a = foo();
+    printf ("in main: %p\n",a);
+
+    free(a); //deallocated memory
+
+    return 0;
+}
+*/
+//------------------------------------
+struct Polygon {
+    int x;
+    int y;
+};
+typedef struct Point Point;
+
+struct Polygon {
+        Point* points;
+        int size;
+        int capacity;
+};
+typedef struct Polygon Polygon;
+void polygon_init(Polygon* p) {
+        p->size = 0;
+        p->capacity = 8;
+        p->points = (Point*)malloc(p.capacity * sizeof(Point));
+
+}
+void polygon_free(Polygon* p){
+        free(p->points);
+        p->points = NULL;
+        p->size = 0;
+}
+void polygon_push_back(Polygon* pol, Point p){
+        if (pol->size>=pol-> capacity){
+                Point* old = pol -> points;
+                pol -> capacity = pol->capacity * 2;
+                p->points = (Point*)malloc(p->capacity * sizeof(Point));
+                for (int i = 0; i < pol->size; ++i){
+                    pol->points[i] = old[i];
+                }
+            free(old);
+
+        }
+          pol-> points[size] = p;
+          ++size;
+}
+
+int main() {
+        Polygon pol;
+        polygon_init(&pol);
+        polygon_free(&pol);
+        polygon_free(&pol);
+
+
+}
