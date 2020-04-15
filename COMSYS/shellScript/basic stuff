@@ -1,0 +1,7 @@
+#!/bin/sh // just like improt StdEnv or #include <stdio.h>
+//1*
+echo "help, plz enter ur name"
+read name
+echo "hello $name"
+OP: 1.help, plz enter ur name 2. 'enter ur name" // for the $name 3. shows "hello $name"
+//---------------------------------------------------
