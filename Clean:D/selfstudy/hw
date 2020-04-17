@@ -1,0 +1,61 @@
+module hw1q1
+import StdEnv
+showgrade x
+| x < 0.0 = "-1"
+| x < 50.0 = "1"
+| x < 60.0 = "2"
+| x < 70.0 = "3"
+| x < 85.0 = "4"
+| x <= 100.0 = "5"
+| x > 100.0 = "-1"
+Start = showgrade 999.999
+//---------------------------------------
+module hw1q2
+import StdEnv
+month x
+| x <= 0 = "Invalid month"
+| x == 1 = "Jan"
+| x == 2 = "Feb"
+| x == 3 = "Mar"
+| x == 4 = "Api"
+| x == 5 = "May"
+| x == 6 = "Jun"
+| x == 7 = "Jul"
+| x == 8 = "Aug"
+| x == 9 = "Sep"
+| x == 10 = "Oct"
+| x == 11 = "Nov"
+| x == 12 = "Dec"
+| x > 12 = "Invalid month"
+Start = month 7
+//-------------------
+module hw1q3
+import StdEnv
+mybill :: Real Real -> Real
+mybill x y = (x * y) + x
+
+Start = mybill 10.00 0.50
+//---------------------
+module hw4q1
+import StdEnv
+
+f1 :: [[Int]] -> [[Int]]
+f1 x = [filter (\x = x rem 10 <> 0)(map (\x = 5*x) (dropWhile(checkPrime)a)) \\a<-x]
+//dropWhile :: (a -> .Bool) !u:[a] -> u:[a]
+checkPrime :: Int -> Bool
+checkPrime x
+|x <= 1 = True
+=not(isEmpty[a\\a<-[2..x-1]|x rem a == 0])
+
+Start = f1 [[1, 2, 3, 4], [9, 7, 6, 5, 4, 3, 0], [3, 5, 7, 9], [], [128, 64, 32]]
+//------------------------------------
+module hw4q2
+import StdEnv
+// Write function that returns length of a list
+// You must use foldr or foldl
+// foldl::(.a -> .(.b -> .a)) .a ![.b] -> .a
+// foldr :: (.a -> .(.b -> .b)) .b ![.a] -> .b	//	op e0 (op e1(...(op r e##)...)
+f2 :: [Int] -> Int
+f2 x = sum(foldr(\a b = [1] ++ b) [] x)
+
+Start = f2 []
