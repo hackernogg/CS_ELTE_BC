@@ -1,10 +1,10 @@
-# Write-Output "hello world"
-# Write-Output $args
-# $args
+ Write-Output "hello world"
+ Write-Output $args
+ $args
 # to a specific parameter:
-# $args[0]
+ $args[0]
 # the number of the parameters
-# $args.Count
+ $args.Count
 #variables
 $a="apple,banana,orange,panda,bear"
 
@@ -37,11 +37,11 @@ while ( $i -le 10) {
     }
   ------------------------------------------------
   #get lines from a file which contains apple
-#Get-Content .\apple.txt | Select-String "apple"
+Get-Content .\apple.txt | Select-String "apple"
 
 # the alternate for wc
 # cound how many lines we have that contains the apple keyword
-#Get-Content .\apple.txt | Select-String "apple" | Measure-Object
+Get-Content .\apple.txt | Select-String "apple" | Measure-Object
 
 # Count things from files that contains numbers
 (Get-Content .\number.txt | Measure-Object -Maximum).Maximum
