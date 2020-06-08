@@ -1,0 +1,12 @@
+Create a type for representing a phone book. Represent this type with a structure which stores the names, the corresponding numbers and the number of entries. Store phone numbers as strings so you can have numbers in special format: "+36 20 123-4567".
+
+The phone book has the following operations:
+
+insert(): It has 3 parameters: a phone book, a name and a phone number. It inserts the name to the given phone book and assigns the number to it.
+search(): It has 2 parameters: a phone book and a name. It returns the phone number belonging to that name, or returns NULL in case this name is missing.
+print(): It has 1 parameter: a phone book. It prints all entries of the phone book as name-number pairs.
+initialize(): It has 1 parameter: a phone book. It initializes the phone book, for example the entry number attribute to 0.
+destruct(): It has 1 parameter: a phone book. It deallocates the reserved memory used by the phone book, in case the entries are stored on the heap.
+In the main() program read some names and phone numbers from the standard input. Insert them to an initialized phone book and print all of them using the printer function. Create some test code where you try to find the phone number of somebody. Create positive and negative test cases too. Make sure that there is no memory leak in the program.
+
+Separate the phone book implementation to a separate translation unit. Use the "include guard" idiom.
