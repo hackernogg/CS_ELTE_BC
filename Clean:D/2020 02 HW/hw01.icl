@@ -22,7 +22,7 @@ sumOfSquares :: Int -> Int
 sumOfSquares x
 | x < 0 = 0
 | x == 1 = 1
-= x * x + sumOfSquares (x - 1)
+= squares x + sumOfSquares (x - 1)
 
 squares :: Int -> Int
 squares a
