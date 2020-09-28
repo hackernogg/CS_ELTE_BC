@@ -10,3 +10,4 @@ public class hw1{
     System.out.println(max);
   }
 }
+// find the max num from command line (take arguments from command line)
