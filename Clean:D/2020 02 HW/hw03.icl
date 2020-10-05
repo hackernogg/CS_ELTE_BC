@@ -54,3 +54,5 @@ minimum [x:xs]
 
 Start = minimum [5,8,1,999,0,-1] // 1
 //Start = minimum [10,9,8,7,6] // 6
+
+copyRight Sun Yilong
