@@ -33,3 +33,5 @@ avg [] = 0.0
 avg [x:xs]
 = (foldr (+) 0.0 [x:xs])/(toReal(length[x:xs]))
 Start = avg [5.5,6.6]
+
+copyRight by Sun Yilong
