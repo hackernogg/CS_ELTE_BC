@@ -27,4 +27,4 @@ reverseLists [x:xs]
 
 Start = reverseLists [[1..10],[4..10],[5,4,3,2,1]]
 
-copyRight Sun Yilong
+copyRight by Sun Yilong
