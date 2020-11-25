@@ -71,3 +71,6 @@ sumChildren (Node x l r) a
 
 
 Start = sumChildren (Node 2 (Node 1 Leaf Leaf) (Node 2 (Node 3 Leaf Leaf) (Node 1 Leaf Leaf))) 2 
+
+
+copyRight by Sun Yilong
