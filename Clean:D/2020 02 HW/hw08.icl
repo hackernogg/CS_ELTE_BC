@@ -1,6 +1,6 @@
 module hw8
 import StdEnv
-/*
+
 f :: {Int} -> {(Int, Bool)}
 f x
 = {f1 a\\ a <-:x}
@@ -22,7 +22,7 @@ toList x
 = toList (x/10) ++ [x rem 10]
 
 Start = f {312, 1001, 1010}
-*/
+//---------------------------------
 ::Person={name::String, height::Real}
 
 ChangeHeight :: Person Real  -> Person
