@@ -49,3 +49,9 @@ isPalindrone n
 = reverse(sequence n) == sequence n//reverse 倒置数列
 
 Start = isPalindrone 733337
+//_____________________________
+toList :: {a} -> [a]
+toList array = [ x \\ x <-:array]
+
+toArray :: [a] -> {a}
+toArray list = {x \\ x<-list}
