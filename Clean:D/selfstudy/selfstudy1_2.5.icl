@@ -55,3 +55,9 @@ toList array = [ x \\ x <-:array]
 
 toArray :: [a] -> {a}
 toArray list = {x \\ x<-list}
+
+avge :: [Real] -> Real
+avge [] = 0.0
+avge x = (sum x)/ (toReal(length x))
+
+size(x) <-{}-> x.[0] [] -> x!!0
