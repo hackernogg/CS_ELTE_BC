@@ -61,3 +61,30 @@ avge [] = 0.0
 avge x = (sum x)/ (toReal(length x))
 
 size(x) <-{}-> x.[0] [] -> x!!0 size("name")==4 
+//____________________________
+getNode :: (Tree a) -> a
+getNode (Node x l r) = x
+
+getLeft :: (Tree a) -> (Tree a)
+getLeft (Node x l r) = l
+
+getRight :: (Tree a) -> (Tree a)
+getRight (Node x l r) = r
+
+SumTree :: (Tree Int) -> Int
+SumTree Leaf = 0
+SumTree (Node x l r) = x + (SumTree l) + (SumTree r)
+
+isLeaf :: (Tree a) -> Bool
+isLeaf Leaf = True
+isLeaf _ = False
+
+getMin :: (Tree a) -> a
+getMin (Node x l r)
+| isLeaf l = x
+= getMin l
+
+getMax :: (Tree a) -> a
+getMax (Node x l r)
+| isLeaf r = x
+= getMax r
