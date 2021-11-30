@@ -4,7 +4,7 @@
     /*-------------------
     $name = 'Jim raynor';
     var_dump($_GET);
-    //https://webprogramozas.inf.elte.hu/hallgatok/bcfogs/9/?%20a=1&b=2&c[]=1&c[]=4
+    //http://webprogramozas.inf.elte.hu/hallgatok/bcfogs/9/?a=1&b=2&c[]=1&c[]=4
     */
     if( isset($_GET['name'])){
         $name = $_GET['name'];
