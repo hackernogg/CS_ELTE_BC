@@ -68,7 +68,7 @@
     }
     var_dump($_POST);
     if($_POST){
-        echo "hi";
+        echo "got post";
     }
 
 
@@ -86,10 +86,16 @@
     <p><?=$highestAttack ?></p>
     <h1>3 highestHealth.</h1>
     <p><?=$highestHealth ?></p>
+    <h1>4&5 table.</h1>
     <form method="post">
+        <p>plz, put text in to both field, or just let both of them be empty</p>
+        <h3>avalible Race type: Zerg,Terran,Protoss</h3>
+        <h2>Race type<input name="raceType"></h2>
+        <h3>avalible Attack type: Ground, Fly</h3>
+        <h2>Attack type<input name="attackType"></h2>
         <input type="submit" name="table" value="show table">
     </form>
-    <?php if($_POST) :?>
+    <?php if($_POST && $_POST["raceType"]==""&&$_POST["attackType"]=="") :?>
         <table>
         <?php foreach($data as $player) :?>
             <tr>
@@ -103,6 +109,25 @@
                 <?php endforeach;?>
 
 
+            </tr>
+        <?php endforeach;?>
+        </table>
+    <?php endif ;?>
+    <?php if($_POST && $_POST["raceType"]!=""&&$_POST["attackType"]!="") :?>
+        <table>
+        <?php foreach($data as $player) :?>
+            <?php if($_POST["raceType"]==$player["race"]&&in_array($_POST["attackType"],$player["attack"])) :?>
+            <tr>
+                <td><?=$player["race"]?></td>
+                <td><?=$player["unitName"]?></td>
+                <td><?=$player["avgAttack"]?></td>
+                <td><?=$player["avgHealth"]?></td>
+                <td><?=$player["unitType"]?></td>
+                <?php foreach($player["attack"] as $attack) :?>
+                    <td><?=$attack?></td>
+                <?php endforeach;?>
+
+            <?php endif ;?>
             </tr>
         <?php endforeach;?>
         </table>
