@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1647359444 source:f:\oop\hw1\hw1\main.cpp
+	<iostream>
+	<vector>
+	"menu.h"
+
+1647364840 f:\oop\hw1\hw1\menu.h
+	"bagqueue.h"
+
+1647363862 source:f:\oop\hw1\hw1\menu.cpp
+	<iostream>
+	"menu.h"
+	"read.hpp"
+	<sstream>
+
+1647357718 f:\oop\hw1\hw1\read.hpp
+	<iostream>
+	<string>
+
+1647365008 f:\oop\hw1\hw1\bagqueue.h
+	<string>
+	<iostream>
+	<vector>
+	"read.hpp"
+
+1647364768 source:f:\oop\hw1\hw1\bagqueue.cpp
+	"bagqueue.h"
+
