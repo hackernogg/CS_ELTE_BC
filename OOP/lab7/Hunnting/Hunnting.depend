@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1648315330 source:f:\oop\lab7\hunnting\infile.cpp
+	"InFile.h"
+
+1648315240 f:\oop\lab7\hunnting\infile.h
+	<iostream>
+	<fstream>
+
+1648315703 source:f:\oop\lab7\hunnting\main.cpp
+	<iostream>
+	"InFile.h"
+
