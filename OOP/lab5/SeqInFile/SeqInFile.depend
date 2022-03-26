@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1648226347 source:f:\oop\lab5\seqinfile\main.cpp
+	<iostream>
+	<fstream>
+
