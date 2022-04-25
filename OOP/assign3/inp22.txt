@@ -1,0 +1,5 @@
+2
+G greenish 10
+S sponge 20
+10
+0 0 0 0 0 0 0 0 0 0

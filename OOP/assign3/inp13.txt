@@ -1,0 +1,7 @@
+4
+S plash 20
+G greenish 10
+D bug 15
+S sponge 20
+10
+0 2 1 0 2 0 1 0 1 2
