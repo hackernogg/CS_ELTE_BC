@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1650910152 source:f:\oop\lab8\shop\customer.cpp
+	"Customer.h"
+	<sstream>
+
+1650907800 f:\oop\lab8\shop\customer.h
+	"Store.h"
+	<iostream>
+	<fstream>
+	<vector>
+
+1650907121 f:\oop\lab8\shop\store.h
+	"Department.h"
+	<iostream>
+	<fstream>
+	<vector>
+
+1650903513 f:\oop\lab8\shop\department.h
+	<iostream>
+	<fstream>
+	<vector>
+	"Product.h"
+
+1650910022 f:\oop\lab8\shop\product.h
+	<iostream>
+
+1650906694 source:f:\oop\lab8\shop\department.cpp
+	"Department.h"
+
+1650909786 source:f:\oop\lab8\shop\main.cpp
+	<iostream>
+	"Customer.h"
+
+1650907131 source:f:\oop\lab8\shop\store.cpp
+	"Store.h"
+

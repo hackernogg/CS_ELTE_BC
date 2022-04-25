@@ -1,0 +1,8 @@
+Computer 500
+Telephone 60
+Telephone 35
+Telephone 65
+Telephone 110
+Lamp 13
+Computer 800
+Lamp 5
