@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1650970968 source:f:\oop\lab9\inheritance\garden.cpp
+	"Garden.h"
+
+1650998012 f:\oop\lab9\inheritance\garden.h
+	"Parcel.h"
+
+1650998043 f:\oop\lab9\inheritance\parcel.h
+	"Plant.h"
+
+1650998077 f:\oop\lab9\inheritance\plant.h
+	<iostream>
+	<vector>
+
+1650971861 source:f:\oop\lab9\inheritance\gardener.cpp
+	"Gardener.h"
+
+1650998023 f:\oop\lab9\inheritance\gardener.h
+	"Garden.h"
+
+1650972738 source:f:\oop\lab9\inheritance\main.cpp
+	<iostream>
+	"Gardener.h"
+
+1650969427 source:f:\oop\lab9\inheritance\parcel.cpp
+	"Parcel.h"
+
+1650972570 source:f:\oop\lab9\inheritance\plant.cpp
+	"Plant.h"
+
