@@ -1,0 +1,5 @@
+Alan PPKE highjump 21 running100 22
+Bob OE highjump 2 running100 1
+Peter ELTE running100 2
+Peter2 ELTE running100 2 highjump 10
+Daniel BME highjump 1 running100 24
