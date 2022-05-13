@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1652386586 source:f:\oop\lab10\beststd\main.cpp
+	<iostream>
+	"library/summation.hpp"
+	"library/seqinfileenumerator.hpp"
+	"library/stringstreamenumerator.hpp"
+	"library/maxsearch.hpp"
+
+1594542766 f:\oop\lab10\beststd\library\summation.hpp
+	"procedure.hpp"
+	<iostream>
+
+1586934366 f:\oop\lab10\beststd\library\procedure.hpp
+	<cstddef>
+	"enumerator.hpp"
+	<iostream>
+	<vector>
+
+1502810830 f:\oop\lab10\beststd\library\enumerator.hpp
+
+1594564888 f:\oop\lab10\beststd\library\seqinfileenumerator.hpp
+	<fstream>
+	<typeinfo>
+	<sstream>
+	"enumerator.hpp"
+
+1554933622 f:\oop\lab10\beststd\library\stringstreamenumerator.hpp
+	<typeinfo>
+	<sstream>
+	"enumerator.hpp"
+
+1619803324 f:\oop\lab10\beststd\library\maxsearch.hpp
+	"procedure.hpp"
+
