@@ -21,14 +21,18 @@ struct Bag
      friend std::istream& operator>>(std::istream& s, Bag& e)
     {
         e.element=read<int>("element:","Integer is needed!",valid);
-        std::cout<<"frequency:";
-        s>>e.frequency;
+        e.frequency=read<int>("frequency:","Integer is needed!",valid);
         return s;
     }
     friend std::ostream& operator<<(std::ostream& s, const Bag& e)
     {
         s<<"element: "<<e.element<<" frequency: "<<e.frequency<<" ";
         return s;
+    }
+    ///for testing
+    bool operator==(const Bag& b)
+    {
+        return (element==b.element && frequency==b.frequency);
     }
 };
 
@@ -40,6 +44,14 @@ class BagQueue
         void rem();
         Bag MaxEle();
         Bag GetFre(int e);
+        bool isEmpty() {return _vec.size()==0;}
+
+        ///Methods for testing
+        friend std::ostream& operator<<(std::ostream& s, const BagQueue& q); ///print a line
+        unsigned int getLength() const {return _vec.size();}
+        unsigned int getCapacity() const {return _vec.capacity();}
+        std::vector<Bag> getItems() const;
+        //int getMaxindex() const {return maxindex();}
 
 
     private:

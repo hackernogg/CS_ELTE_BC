@@ -2,7 +2,7 @@
 #include "menu.h"
 #include "read.hpp"
 #include <sstream>
-#define menuCount 6 ///number of menu items
+#define menuCount 5 ///number of menu items
 
 using namespace std;
 
@@ -35,9 +35,6 @@ void Menu::Run()
             case 5:
                 print();
                 break;
-            case 6:
-
-                break;
             default:
                 cout<<"\nGoodbye!\n";
                 break;
@@ -56,7 +53,6 @@ int Menu::MenuPrint()
     cout<<"3. Get frequency\n";
     cout<<"4. Largest element\n";
     cout<<"5. Print\n";
-    cout<<"6. Load test (how many items we can put in)\n";
     cout<<"****************************************\n";
     ///flexible error message
     ostringstream s;
@@ -86,15 +82,36 @@ void Menu::removing()
 void Menu::getMaxElement()
 {
     Bag m;
-    m=Q.MaxEle();
-    cout << "Largest element: "<<m;
+    if(Q.isEmpty()==false)
+    {
+        m=Q.MaxEle();
+        cout << "Largest element: "<<m;
+    }
+    else
+    {
+        cout<<"The Queue is empty!";
+    }
 }
 void Menu::findFre()
 {
     Bag b;
     int i;
-    cout << "Enter the element: "<<endl;
-    cin >>i;
-    b=Q.GetFre(i);
-    cout << "The frequency: " << b;
+    if(Q.isEmpty()==false){
+        cout << "Enter the element: "<<endl;
+        cin >>i;
+        b=Q.GetFre(i);
+        if(i==b.element){
+            cout << "The frequency: " << b;
+        }
+        else
+        {
+            cout << "Can not find it :C!";
+        }
+
+    }
+    else
+    {
+        cout<<"The Queue is empty!";
+    }
+
 }

@@ -14,7 +14,7 @@ class Menu
         void findFre();
         void getMaxElement();
         void print();
-        void loadTest();
+        void isEmpty();
         BagQueue Q;
 
 };
