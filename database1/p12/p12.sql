@@ -133,13 +133,4 @@ then write a procedure where p_orig and p_dest are parameters.
 */
 --- Reaches(x,y,c,r) <-Reaches (x,z,c1,r1) and flight(z,y,c2) and c=c1+c2 and r=r1||y
 
-WITH  reaches(orig, dest, cost, route) AS 
- (
-  SELECT orig, dest, cost, orig||dest FROM flight
-   UNION ALL
-  SELECT reaches.orig, flight.dest, flight.cost+reaches.cost, reaches.route||flight.dest FROM flight, reaches
-  WHERE reaches.dest = flight.orig AND reaches.orig <> flight.dest
-  )
-  CYCLE orig, dest SET cycle_yes TO 'Y' DEFAULT 'N' 
-SELECT  distinct orig, dest, cost, route FROM reaches 
-WHERE orig='San Francisco' AND dest='New York';
+
