@@ -131,7 +131,8 @@ cost of that flight, r is the route (concatenated string).
 First specify the Datalog rules for Reaches(orig,dest,cost,route) then rewrite it into an SQL recursive query,
 then write a procedure where p_orig and p_dest are parameters.
 */
---- Reaches(x,y,c,r) <-Reaches (x,z,c1,r1) and flight(z,y,c2) and c=c1+c2 and r=r1||y
+-- Reaches(x, y, c, r) <- Flight(x, y, c) AND r=x||y
+-- Reaches(x, y, c, r) <- Reaches(x, z, c1, r1) AND Flight(z, y, c2) AND c=c1+c2 AND r=r1||y
 
 WITH  reaches(orig, dest, cost, route) AS 
  (
