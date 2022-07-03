@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1648253607 source:f:\oop\lab6\num_occur\main.cpp
-	<iostream>
-	"inFile.h"
-
-1648253872 f:\oop\lab6\num_occur\infile.h
-	<iostream>
-	<fstream>
-

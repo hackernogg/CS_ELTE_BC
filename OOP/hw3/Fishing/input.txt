@@ -1,3 +1,0 @@
-Peter LAC0512 carp 45 carp 53 catfish 96
-Jerry LAC0512 carp 45
-Tom LAC0411 carp 53
