@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1648669750 source:f:\oop\midsample1\university\infile.cpp
+	"InFile.h"
+
+1648669804 f:\oop\midsample1\university\infile.h
+	<iostream>
+	<fstream>
+
+1648669795 source:f:\oop\midsample1\university\main.cpp
+	<iostream>
+	"InFile.h"
+

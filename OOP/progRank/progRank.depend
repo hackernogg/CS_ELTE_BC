@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1652945180 source:f:\oop\endsample3\progrank\main.cpp
+	<iostream>
+	"library/summation.hpp"
+	"library/maxsearch.hpp"
+	"library/seqinfileenumerator.hpp"
+	"library/stringstreamenumerator.hpp"
+
+1594542766 f:\oop\endsample3\progrank\library\summation.hpp
+	"procedure.hpp"
+	<iostream>
+
+1586934366 f:\oop\endsample3\progrank\library\procedure.hpp
+	<cstddef>
+	"enumerator.hpp"
+	<iostream>
+	<vector>
+
+1502810830 f:\oop\endsample3\progrank\library\enumerator.hpp
+
+1619803324 f:\oop\endsample3\progrank\library\maxsearch.hpp
+	"procedure.hpp"
+
+1594564888 f:\oop\endsample3\progrank\library\seqinfileenumerator.hpp
+	<fstream>
+	<typeinfo>
+	<sstream>
+	"enumerator.hpp"
+
+1554933622 f:\oop\endsample3\progrank\library\stringstreamenumerator.hpp
+	<typeinfo>
+	<sstream>
+	"enumerator.hpp"
+
