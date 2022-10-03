@@ -1,0 +1,7 @@
+program negate
+    boolean x;
+begin
+    read(x);
+    x := not x;
+    write(x);
+end

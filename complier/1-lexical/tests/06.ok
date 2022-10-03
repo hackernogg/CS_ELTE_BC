@@ -1,0 +1,8 @@
+program infinite
+    integer x;
+begin
+    read(x);
+    while true do
+        write(x);
+    done
+end

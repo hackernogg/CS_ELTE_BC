@@ -1,0 +1,11 @@
+program repeat
+    integer x;
+    integer y;
+begin
+    read(x);
+    read(y);
+    while x > 0 do
+        write(y);
+        x := x-1;
+    done
+end

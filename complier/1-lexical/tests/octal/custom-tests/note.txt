@@ -1,0 +1,32 @@
+This folder contains test cases specific to this exercise.
+
+These test cases should
+    1. ALL return the correct tokens in the *.ok files 
+    2. NOT return the correct tokens in the *.bad files
+    3. exit with "Lexical error" in *.lexical-error files
+
+For *.ok files, if you added the token "T_NUM" for this exercise,
+then 01.ok should return:
+T_NUM
+T_NUM
+T_NUM
+T_NUM
+
+If there are 4 lines in 01.ok, then the output should also contain
+4 lines, otherwise the test case failed even if the correct
+token is returned.
+
+The *.bad files contain test cases which should not return the correct token.
+A single test case can return 2 or more tokens, in which case it will be 
+considered incorrect even if it is the desired token being returned:
+12  ->  T_NUM
+        T_NUM
+
+Example for *.lexical-error file output:
+T_NUM
+T_ID
+Line 2: Lexical error
+
+Side note:
+    1. These tests check the isolated correctness of your solution, they do not check whether it has broken the program in other places.
+    2. These tests might not capture all the cases, if you are doubtful of your solution, always add more test cases.
