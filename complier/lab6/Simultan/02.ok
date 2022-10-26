@@ -1,0 +1,8 @@
+program prog1
+    integer id1;
+    integer id2;
+    integer id3;
+    integer id4;
+begin
+    id1, id2, id3, id4 := 1, 22, true, 2+2+3;
+end

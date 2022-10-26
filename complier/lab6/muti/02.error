@@ -1,0 +1,5 @@
+program oszto
+  boolean;
+begin
+  skip;
+end

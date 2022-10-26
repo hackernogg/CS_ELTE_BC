@@ -1,0 +1,8 @@
+program oszto
+  integer a;
+  boolean b;
+begin
+  read(a);
+  read(b);
+  write((b?a:b));
+end

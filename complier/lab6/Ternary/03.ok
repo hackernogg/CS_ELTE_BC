@@ -1,0 +1,13 @@
+program oszto
+  integer a;
+  boolean b;
+  integer c;
+begin
+  read(a);
+  read(b);
+  write(((a=2)?true:(12*2)));
+  c := 3 - ((a=2)?true:(12*2)) + 1;
+  if ((a=2)?true:(12*2)) then
+    skip;
+  endif
+end

@@ -28,6 +28,14 @@
 %token T_MIDOPEN
 %token T_PARALLEL
 %token T_MIDCLOSE
+%token T_COMMA
+%token T_DUPLI
+%token T_LIST
+%token T_LISTEXP
+%token T_PLUSEQ
+%token T_INDEX
+%token T_DOT
+
 
 
 %left T_OR T_AND
@@ -36,6 +44,7 @@
 %left T_QUESTION T_COLON
 %left T_SHIFT
 %left T_ADD T_SUB
+%left T_PLUSPLUS
 %left T_MUL T_DIV T_MOD
 %nonassoc T_NOT
 
@@ -63,14 +72,55 @@ declarations:
 ;
 
 declaration:
-    T_INTEGER T_ID T_SEMICOLON
+
+    type multi_id T_SEMICOLON
     {
-        std::cout << "declaration -> T_INTEGER T_ID T_SEMICOLON" << std::endl;
+        std::cout << "declaration -> type multi_id T_SEMICOLON" << std::endl;
+    }
+|   
+    type T_LIST multi_id T_SEMICOLON
+    {
+        std::cout << "declaration -> type T_LIST multi_id T_SEMICOLON" << std::endl;
     }
 |
-    T_BOOLEAN T_ID T_SEMICOLON
+    T_LESS type T_COMMA in_tuple T_GR multi_id T_SEMICOLON
     {
-        std::cout << "declaration -> T_BOOLEAN T_ID T_SEMICOLON" << std::endl;
+        std::cout << "declaration -> T_LESS type T_COMMA in_tuple T_GR multi_id T_SEMICOLON" << std::endl;
+    }
+;
+in_tuple:
+    type
+    {
+        std::cout << "in_tuple -> type" << std::endl;
+    }
+|
+    type T_COMMA in_tuple
+    {
+        std::cout << "in_tuple -> type T_COMMA in_tuple" << std::endl;
+    }
+;
+
+type:
+    T_INTEGER
+    {
+        std::cout << "type -> T_INTEGER" << std::endl;
+    }
+|
+    T_BOOLEAN
+    {
+        std::cout << "type -> T_BOOLEAN" << std::endl;
+    }
+;
+
+multi_id:
+    T_ID 
+    {
+        std::cout << "multi_id -> T_ID" << std::endl;
+    }
+|   
+    T_ID T_COMMA multi_id
+    {
+        std::cout << "multi_id -> T_ID T_COMMA multi_id" << std::endl;
     }
 ;
 
@@ -122,6 +172,11 @@ statement:
     {
         std::cout << "statement -> T_MIDOPEN Part_statement T_PARALLEL Part_statement T_MIDCLOSE T_SEMICOLON" << std::endl;
     }
+|
+    T_DUPLI statement
+    {
+        std::cout << "statement -> T_DUPLI statement" << std::endl;
+    }
 ;
 
 Part_statement:
@@ -157,14 +212,58 @@ Part_statement:
 ;
 
 assignment:
-    T_ID T_ASSIGN expression T_SEMICOLON
+    id T_ASSIGN expression T_SEMICOLON
     {
         std::cout << "assignment -> T_ID T_ASSIGN expression T_SEMICOLON" << std::endl;
+    }
+|
+    T_ID T_PLUSEQ expression T_SEMICOLON
+    {
+        std::cout << "assignment -> T_ID T_PLUSEQ expression T_SEMICOLON" << std::endl;
+    }
+|
+    simultan T_SEMICOLON
+    {
+        std::cout << "assignment -> simultan T_SEMICOLON" << std::endl;
+    }
+;
+simultan:
+    T_ID loops expression
+    {
+        std::cout << "simultan-> T_ID loops expression" << std::endl;
+    }
+;
+
+loops:
+    T_COMMA T_ID T_ASSIGN expression T_COMMA
+    {
+        std::cout << "loops ->  T_COMMA T_ID T_ASSIGN expression T_COMMA" << std::endl;
+    }
+|
+    T_COMMA T_ID loops expression T_COMMA
+    {
+        std::cout << "loops ->  T_COMMA T_ID loops expression T_COMMA" << std::endl;
+    }
+;
+id:
+    T_ID
+    {
+        std::cout << "id -> T_ID " << std::endl;
+    }
+|
+    T_ID T_INDEX
+    {
+        std::cout << "id -> T_ID T_INDEX " << std::endl;
+    }
+|
+    T_ID T_DOT T_NUM
+    {
+        std::cout << "id -> T_ID T_DOT T_NUM " << std::endl;
     }
 ;
 
 read:
-    T_READ T_OPEN T_ID T_CLOSE T_SEMICOLON
+    T_READ T_OPEN id T_CLOSE T_SEMICOLON
     {
         std::cout << "read -> T_READ T_OPEN T_ID T_CLOSE T_SEMICOLON" << std::endl;
     }
@@ -197,6 +296,11 @@ loop:
 ;
 
 expression:
+    T_LISTEXP
+    {
+        std::cout << "expression -> T_LISTEXP" << std::endl;
+    }
+|
     T_NUM
     {
         std::cout << "expression -> T_NUM" << std::endl;
@@ -212,7 +316,7 @@ expression:
         std::cout << "expression -> T_FALSE" << std::endl;
     }
 |
-    T_ID
+    id
     {
         std::cout << "expression -> T_ID" << std::endl;
     }
@@ -235,6 +339,11 @@ expression:
     expression T_SUB expression
     {
         std::cout << "expression -> expression T_SUB expression" << std::endl;
+    }
+|
+    expression T_PLUSPLUS expression
+    {
+        std::cout << "expression -> expression T_PLUSPLUS expression" << std::endl;
     }
 |
     expression T_MUL expression

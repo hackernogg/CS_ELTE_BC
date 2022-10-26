@@ -1,0 +1,6 @@
+program prog1
+    integer id1;
+    integer id2;
+begin
+    id1, id2 := 3, 4+5;
+end

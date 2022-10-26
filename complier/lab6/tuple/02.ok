@@ -1,0 +1,12 @@
+program oszto
+  integer a;
+  <integer, boolean, integer> b;
+  <boolean> c;
+begin
+  b.1 := 2;
+  b.2 := b.1 = b.3;
+  b.3 := 200;
+  c.1 := apple;
+  read(b.5);
+  write(b.4);
+end

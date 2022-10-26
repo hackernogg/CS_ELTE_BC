@@ -1,0 +1,6 @@
+program try
+  integer a;
+begin
+  read(a);
+  write(a >> >> 3);
+end

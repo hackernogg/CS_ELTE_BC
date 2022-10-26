@@ -1,0 +1,7 @@
+program par
+  integer a;
+  integer i;
+begin
+  read(i);
+  [[read(a) || i:=i*2] || if i mod 2 = 0 then write(i); else write(a); endif];
+end

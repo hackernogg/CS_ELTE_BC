@@ -17,6 +17,7 @@ begin       return Parser::T_BEGIN;
 end         return Parser::T_END;
 integer     return Parser::T_INTEGER; 
 boolean     return Parser::T_BOOLEAN;
+list        return Parser::T_LIST;
 skip        return Parser::T_SKIP;
 if          return Parser::T_IF;
 then        return Parser::T_THEN;
@@ -38,11 +39,16 @@ write       return Parser::T_WRITE;
 ">>"        return Parser::T_SHIFT;
 "?"         return Parser::T_QUESTION;
 ":"         return Parser::T_COLON;
+","         return Parser::T_COMMA;
+"++"        return Parser::T_PLUSPLUS;
+"+="        return Parser::T_PLUSEQ;
+"."         return Parser::T_DOT;
 and         return Parser::T_AND;
 or          return Parser::T_OR;
 not         return Parser::T_NOT;
 div         return Parser::T_DIV; 
 mod         return Parser::T_MOD;
+duplicate   return Parser::T_DUPLI;
 "("         return Parser::T_OPEN;
 ")"         return Parser::T_CLOSE;
 "||"        return Parser::T_PARALLEL;
@@ -56,6 +62,8 @@ false       return Parser::T_FALSE;
 "#".*\n    // nothing to do
 
 {LETTER}({LETTER}|{DIGIT}|_)*    return Parser::T_ID;
+"["({DIGIT})+"]"      return Parser::T_INDEX;
+"["({DIGIT}|{LETTER})+(","" "?({DIGIT}|{LETTER})+)*"]"    return Parser::T_LISTEXP;
 
 {WS}+   // nothing to do
 

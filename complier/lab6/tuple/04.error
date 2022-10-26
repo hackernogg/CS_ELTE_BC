@@ -1,0 +1,6 @@
+program oszto
+  integer a;
+  <integer, boolean, integer, integer> b;
+begin
+  b.2;
+end

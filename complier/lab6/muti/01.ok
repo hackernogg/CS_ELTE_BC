@@ -1,0 +1,22 @@
+program oszto
+  integer b,c,d,e,f,g,h,j,k,l,m;
+  integer a, i, oszto;
+  boolean vanoszto;
+begin
+  read(a);
+  vanoszto := false;
+  i := 2;
+  while not vanoszto and i < a do
+    if a mod i = 0 then
+      vanoszto := true;
+      oszto := i;
+    endif
+    i := i+1;
+  done
+  if vanoszto then
+    write(vanoszto);
+    write(oszto);
+  else
+    write(vanoszto);
+  endif
+end

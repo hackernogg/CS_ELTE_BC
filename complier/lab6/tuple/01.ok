@@ -1,0 +1,17 @@
+program oszto
+  integer a;
+  <integer, integer> b;
+begin
+  read(a);
+  write(b.1);
+  write(b.2);
+  while not (a = b.2)
+  do
+    if a > b.1 then
+     a := a - b.1;
+    else
+     b.2 := b.2 - a;
+    endif
+  done
+  write(a);
+end

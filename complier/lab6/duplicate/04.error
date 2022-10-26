@@ -1,0 +1,10 @@
+program oszto
+  integer a;
+begin
+  read(a);
+  a := a - 1;
+  if (a>0) then
+    duplicate;
+  endif
+  write(a);
+end

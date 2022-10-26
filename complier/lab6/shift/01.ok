@@ -1,0 +1,11 @@
+program try
+  integer a;
+begin
+  read(a);
+  if (a mod 2) >> 3 = 0 then
+    a := a >> 2 >> 6;
+  else
+    a := a >> 3;
+  endif
+  write(a);
+end

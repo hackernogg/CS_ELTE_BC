@@ -1,0 +1,8 @@
+program par
+  integer a;
+  integer i;
+begin
+  [read(a) || read(i)]
+  i := i*2;
+  write(i);
+end
