@@ -1,0 +1,28 @@
+@import url("https://cdn.jsdelivr.net/gh/elte-fi/www-assets@19.10.16/styles/mdss.min.css");
+
+body {
+    background-color: #121212;
+    color: white;
+}
+
+h1, thead th {
+    color: rgb(139, 206, 180);
+}
+
+h2 {
+    color: rgb(153, 185, 173);
+}
+
+table tr:nth-child(even){
+    background-color: #121212;
+}
+
+.snow {
+    position: fixed;
+    text-shadow: lightgray 1px 1px 1px;
+}
+
+tr.white {
+    background: lightblue !important;
+    color: black;
+}

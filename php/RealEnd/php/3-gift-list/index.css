@@ -1,0 +1,23 @@
+@import url("https://cdn.jsdelivr.net/gh/elte-fi/www-assets@19.10.16/styles/mdss.min.css");
+
+li.new {
+  list-style-type: "☐ ";
+  font-weight: bold;
+}
+li.ok {
+  list-style-type: "☑ ";
+  color: hsl(100, 52%, 71%);
+  /* font-style: italic; */
+}
+li.discarded {
+  list-style-type: "☒ ";
+  text-decoration: line-through;
+  color: hsl(0, 64%, 79%);
+}
+li form {
+  display: inline-block;
+}
+li form button {
+  border-radius: 5px;
+  border: 1px solid #999;
+}

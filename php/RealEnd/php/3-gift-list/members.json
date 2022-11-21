@@ -1,0 +1,32 @@
+{
+    "1": {
+        "id": "1",
+        "name": "My dear father",
+        "ideas": []
+    },
+    "2": {
+        "id": "2",
+        "name": "My dear mother",
+        "ideas": []
+    },
+    "3": {
+        "id": "3",
+        "name": "Loved grandpa",
+        "ideas": []
+    },
+    "4": {
+        "id": "4",
+        "name": "Heartful grandma",
+        "ideas": []
+    },
+    "5": {
+        "id": "5",
+        "name": "My cute sister",
+        "ideas": []
+    },
+    "6": {
+        "id": "6",
+        "name": "Protective brother",
+        "ideas": []
+    }
+}

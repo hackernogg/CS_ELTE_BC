@@ -1,0 +1,18 @@
+@import url("https://cdn.jsdelivr.net/gh/elte-fi/www-assets@19.10.16/styles/mdss.min.css");
+
+label {
+    display: inline-block;
+    width: 200px;
+}
+
+label:last-of-type {
+    width: 180px;
+}
+
+.merry {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    color: darkgreen;
+}
